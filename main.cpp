@@ -113,24 +113,24 @@ int main(void)
         glEnableVertexAttribArray(0);
         glBindBuffer(GL_ARRAY_BUFFER, vb);
         glVertexAttribPointer(
-            0,                  // attribute
-            3,                  // size
-            GL_FLOAT,           // type
-            GL_FALSE,           // normalized?
-            0,                  // stride
-            (void*)0            // array buffer offset
+            0,                  
+            3,                  
+            GL_FLOAT,           
+            GL_FALSE,           
+            0,                  
+            (void*)0            
         );
 
-        // 2nd attribute buffer : UVs
+        //UVs
         glEnableVertexAttribArray(1);
         glBindBuffer(GL_ARRAY_BUFFER, uvsb);
         glVertexAttribPointer(
-            1,                                // attribute
-            2,                                // size
-            GL_FLOAT,                         // type
-            GL_FALSE,                         // normalized?
-            0,                                // stride
-            (void*)0                          // array buffer offset
+            1,                                
+            2,                                
+            GL_FLOAT,                         
+            GL_FALSE,                         
+            0,                                
+            (void*)0                          
         );
 
         // Draw the triangle !
@@ -147,7 +147,7 @@ int main(void)
     }
     while ( glfwGetKey(window, GLFW_KEY_ESCAPE) != GLFW_PRESS && glfwWindowShouldClose(window) == 0);
 
-    // Cleanup VBO and shader
+    // limpeza VBO e Shaders
     glDeleteBuffers(1, &vb);
     glDeleteBuffers(1, &uvsb);
     glDeleteProgram(ProgramID);
